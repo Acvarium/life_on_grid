@@ -2,34 +2,42 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<style>
-		table {
-			border-collapse: collapse;
-		}
-		td, tr {
-			border: 1px solid black;
-			width: 15px;
-			height: 15px;
-			padding: 0;
-			margin: 0;
-		}
+  <meta charset="utf-8">
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    tr {
+      border: 1px solid black;
+      width: 15px;
+      height: 15px;
+      padding: 0;
+      margin: 0;
+
+    }
 
     td.corpse {
       background-color: gray;
+      -webkit-transition: background-color 100ms linear;
+      -ms-transition: background-color 100ms linear;
+      transition: background-color 100ms linear;
     }
-		td.alive {
-			background-color: black;
-		}
 
-
-	</style>
+    td.alive {
+      background-color: red;
+      -webkit-transition: background-color 1000ms linear;
+      -ms-transition: background-color 1000ms linear;
+      transition: background-color 1000ms linear;
+    }
+  </style>
 </head>
 
 <body>
-	<table id="table" name="table">
-	</table>
-	<script src="script.js"></script>
+  <table id="table" name="table">
+  </table>
+  <script src="script.js"></script>
 </body>
 
 </html>

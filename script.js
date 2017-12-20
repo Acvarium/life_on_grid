@@ -35,7 +35,16 @@ function countNeighbors(x, y) {
 for (let y = 0; y < size; y++) {
   let row = table.insertRow();
   for (let x = 0; x < size; x++) {
-    row.insertCell().classList.toggle('alive', Math.random() < 0.5);
+    // row.insertCell().classList.toggle('alive', Math.random() < 0.5);
+
+    let cell = row.insertCell();
+    cell.classList.toggle('alive', Math.random() < 0.5);
+    cell.onmousemove = function(e) {
+      if (e.buttons === 1) {
+        cell.classList.add('alive');
+      }
+    }
+
   }
 }
 
